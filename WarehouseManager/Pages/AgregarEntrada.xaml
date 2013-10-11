@@ -1,0 +1,34 @@
+﻿<mui:ModernWindow x:Class="WarehouseManager.Pages.AgregarEntrada"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Warehouse"
+        LogoData="F1 M 37.3479,12.4387C 48.7322,12.4387 57.9609,21.6674 57.9609,33.0517C 57.9609,44.436 48.7322,53.6647 
+                37.3479,53.6647C 25.9636,53.6647 16.7349,44.436 16.7349,33.0517C 16.7349,21.6674 25.9636,12.4387 
+                37.3479,12.4387 Z  M 37.3177,66.1324C 22.736,66.1324 10.3794,56.6058 6.13239,43.437L 0,43.437L 
+                1.65991,38.1856L 4.90393,38.1555L 10.6714,38.1856L 10.6837,38.1856L 10.6837,38.2538C 12.9875,50.9674
+                24.1133,60.6093 37.4913,60.6093C 50.9036,60.6093 62.0523,50.9177 64.3164,38.1555L 69.7315,38.1555L 
+                70.5715,38.1856L 72.8651,38.1856L 75.0428,43.437L 68.503,43.437C 64.256,56.6058 51.8994,66.1324 
+                37.3177,66.1324 Z M 37.8234,1.52588e-005C 52.4051,1.52588e-005 64.7617,9.52666 69.0087,22.6954L 
+                75.1411,22.6954L 73.4812,27.9468L 70.2371,27.9769L 64.4696,27.9468L 64.4573,27.9468L 64.4573,27.8786C 
+                62.1536,15.165 51.0277,5.52312 37.6498,5.52312C 24.2375,5.52312 13.0887,15.2147 10.8247,27.9769L 
+                5.40955,27.9769L 4.56958,27.9468L 2.276,27.9468L 0.0982666,22.6954L 6.63806,22.6954C 10.8851,9.52666
+                23.2417,1.52588e-005 37.8234,1.52588e-005 Z " 
+                  ContentSource="/Pages/AgregarArticulo.xaml" Width="500" Icon="..\ware.ico">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Agregar Entradas">
+            <mui:LinkGroup.Links>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="settings" GroupName="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="software" Source="/Pages/Settings.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+    
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="settings" Source="/Pages/Settings.xaml" />
+    </mui:ModernWindow.TitleLinks>
+</mui:ModernWindow>

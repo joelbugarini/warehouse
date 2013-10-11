@@ -1,0 +1,9 @@
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\bin\Debug\Properties.dll
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\bin\Debug\Properties.pdb
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\obj\Debug\Properties.dll
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\obj\Debug\Properties.pdb
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\obj\Debug\Properties.csprojResolveAssemblyReference.cache
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\bin\Debug\Properties.dll
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\bin\Debug\Properties.pdb
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\obj\Debug\Properties.dll
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\Properties\obj\Debug\Properties.pdb

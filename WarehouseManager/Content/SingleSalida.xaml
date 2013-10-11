@@ -1,0 +1,93 @@
+<UserControl x:Class="WarehouseManager.Content.SingleSalida"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="366" d:DesignWidth="722">
+    <Grid Style="{StaticResource ContentRoot}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="6"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <StackPanel MaxWidth="200" Margin="0,0,0,20" HorizontalAlignment="Left" Width="400">
+                    <TextBlock Text="Salida" Style="{StaticResource Heading2}" />
+
+                    <TextBlock Text="Nota:"  />
+                    <TextBox x:Name="txtNota" Text="{Binding Nota}" />
+
+                    <TextBlock Text="Fecha:"  />
+                    <DatePicker x:Name="txtFecha" Text="{Binding Fecha}" />
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" >
+                    <Button x:Name="btnGuardar" MaxWidth="100" Content="guardar" Click="btnGuardar_Click" />
+                    <Button x:Name="btnActualizar" MaxWidth="100" Content="actualizar" Click="btnActualizar_Click" Visibility="Collapsed" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+        <GridSplitter Grid.Column="1" />
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Grid.Column="2 " Margin="{StaticResource SplitRight}">
+            <StackPanel MinWidth="200">
+
+                <TextBlock Text="Empleado" Style="{StaticResource Heading1}" />
+                <ListView x:Name="listEmpleado" ItemsSource="{Binding}" ScrollViewer.CanContentScroll="True"  Grid.Row="1">
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="True">
+                            <GridViewColumn DisplayMemberBinding="{Binding IdEmpleado}" Width="0" />
+                            <GridViewColumn Width="150" DisplayMemberBinding = "{Binding NoEmpleado}">
+                                <GridViewColumnHeader MouseLeftButtonUp="headNoEmpleado">
+                                    <StackPanel Width="100" Orientation="Vertical">
+                                        <TextBlock Margin="0,5,0,0" Text="NoEmpleado" TextAlignment="Center"/>
+                                        <TextBox x:Name="txtNoEmpleadoBusqueda" FontWeight="Normal" TextChanged="txtBusqueda_TextChanged"/>
+                                    </StackPanel>
+                                </GridViewColumnHeader>
+                            </GridViewColumn>
+                            <GridViewColumn Width="150" DisplayMemberBinding = "{Binding Nombre}">
+                                <GridViewColumnHeader MouseLeftButtonUp="headNombre">
+                                    <StackPanel Width="100" Orientation="Vertical">
+                                        <TextBlock Margin="0,5,0,0" Text="Nombre" TextAlignment="Center"/>
+                                        <TextBox x:Name="txtNombreBusqueda" FontWeight="Normal" TextChanged="txtBusqueda_TextChanged"/>
+                                    </StackPanel>
+                                </GridViewColumnHeader>
+                            </GridViewColumn>
+                            <GridViewColumn Width="150" DisplayMemberBinding = "{Binding ApellidoPaterno}">
+                                <GridViewColumnHeader MouseLeftButtonUp="headApellidoPaterno">
+                                    <StackPanel Width="100" Orientation="Vertical">
+                                        <TextBlock Margin="0,5,0,0" Text="ApellidoPaterno" TextAlignment="Center"/>
+                                        <TextBox x:Name="txtApellidoPaternoBusqueda" FontWeight="Normal" TextChanged="txtBusqueda_TextChanged"/>
+                                    </StackPanel>
+                                </GridViewColumnHeader>
+                            </GridViewColumn>
+                            <GridViewColumn Width="150" DisplayMemberBinding = "{Binding ApellidoMaterno}">
+                                <GridViewColumnHeader MouseLeftButtonUp="headApellidoMaterno">
+                                    <StackPanel Width="100" Orientation="Vertical">
+                                        <TextBlock Margin="0,5,0,0" Text="ApellidoMaterno" TextAlignment="Center"/>
+                                        <TextBox x:Name="txtApellidoMaternoBusqueda" FontWeight="Normal" TextChanged="txtBusqueda_TextChanged"/>
+                                    </StackPanel>
+                                </GridViewColumnHeader>
+                            </GridViewColumn>
+                            <GridViewColumn Width="150" DisplayMemberBinding = "{Binding Departamento}">
+                                <GridViewColumnHeader MouseLeftButtonUp="headDepartamento">
+                                    <StackPanel Width="100" Orientation="Vertical">
+                                        <TextBlock Margin="0,5,0,0" Text="Departamento" TextAlignment="Center"/>
+                                        <TextBox x:Name="txtDepartamentoBusqueda" FontWeight="Normal" TextChanged="txtBusqueda_TextChanged"/>
+                                    </StackPanel>
+                                </GridViewColumnHeader>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+
+                </ListView>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+    
+</UserControl>

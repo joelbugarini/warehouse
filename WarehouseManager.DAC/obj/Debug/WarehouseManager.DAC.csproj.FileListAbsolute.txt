@@ -1,0 +1,14 @@
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\obj\Debug\WarehouseManager.DAC.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\WarehouseManager.DAC.dll
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\WarehouseManager.DAC.pdb
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\Properties.dll
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\Properties.pdb
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\obj\Debug\WarehouseManager.DAC.dll
+D:\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\obj\Debug\WarehouseManager.DAC.pdb
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\WarehouseManager.DAC.dll
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\WarehouseManager.DAC.pdb
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\Properties.dll
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\bin\Debug\Properties.pdb
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\obj\Debug\WarehouseManager.DAC.csprojResolveAssemblyReference.cache
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\obj\Debug\WarehouseManager.DAC.dll
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager.DAC\obj\Debug\WarehouseManager.DAC.pdb

@@ -1,0 +1,20 @@
+﻿WarehouseManager
+
+
+winexe
+C#
+.cs
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager\obj\Debug\
+WarehouseManager
+none
+false
+DEBUG;TRACE
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager\App.xaml
+421463320133
+2280487720
+48-1570532150
+201949257962
+Assets\Warehouse.Theme.xaml;Content\Salidas.xaml;Content\ListAgregarArticulo.xaml;Content\Entradas.xaml;Content\ListArticulo.xaml;Content\ListDevolucion.xaml;Content\ListEmpleado.xaml;Content\ListEntrada.xaml;Content\ListFactura.xaml;Content\ListFacturaArticulo.xaml;Content\ListPendiente.xaml;Content\ListProvedor.xaml;Content\ListRectificacion.xaml;Content\ListSalida.xaml;Content\ListSalidaArticulo.xaml;Content\ListUsuario.xaml;Content\MainFactura.xaml;Content\MainSalida.xaml;Content\SingleArticulo.xaml;Content\SingleDevolucion.xaml;Content\SingleEmpleado.xaml;Content\SingleEntrada.xaml;Content\SingleFactura.xaml;Content\SingleFacturaArticulo.xaml;Content\SinglePendiente.xaml;Content\SingleProvedor.xaml;Content\SingleRectificacion.xaml;Content\SingleSalida.xaml;Content\SingleSalidaArticulo.xaml;Content\SingleUsuario.xaml;MainWindow.xaml;Content\About.xaml;Content\SettingsAppearance.xaml;Pages\AgregarArticulo.xaml;Pages\Empleados.xaml;Pages\Entradas.xaml;Pages\Home.xaml;Pages\AgregarEntrada.xaml;Pages\Proveedor.xaml;Pages\Salidas.xaml;Pages\Settings.xaml;Reports\Inventario.xaml;
+
+False
+

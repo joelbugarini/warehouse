@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66DD0DFD-621C-44A4-9A53-B2CB1AE9880D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WarehouseManager</RootNamespace>
+    <AssemblyName>WarehouseManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/publish/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/publish/</UpdateUrl>
+    <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>92AEF90C63E5DF73C9D4DA7F463A3477D5F9995E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WarehouseManager_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ware.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirstFloor.ModernUI">
+      <HintPath>..\packages\ModernUI.WPF.1.0.3\lib\net40\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell">
+      <HintPath>..\packages\ModernUI.WPF.1.0.3\lib\net40\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Content\Salidas.xaml.cs">
+      <DependentUpon>Salidas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\MainSalida.xaml.cs">
+      <DependentUpon>MainSalida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Empleados.xaml.cs">
+      <DependentUpon>Empleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Salidas.xaml.cs">
+      <DependentUpon>Salidas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs" />
+    <Compile Include="Reports\Inventario.xaml.cs">
+      <DependentUpon>Inventario.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\Warehouse.Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\Salidas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListAgregarArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\Entradas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Content\ListArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListDevolucion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListEmpleado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListEntrada.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListFactura.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListFacturaArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListPendiente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListProvedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListRectificacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListSalida.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListSalidaArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\ListUsuario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\MainFactura.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\MainSalida.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleDevolucion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleEmpleado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleEntrada.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleFactura.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleFacturaArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SinglePendiente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleProvedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleRectificacion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleSalida.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleSalidaArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Content\SingleUsuario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Content\ListAgregarArticulo.xaml.cs">
+      <DependentUpon>ListAgregarArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Entradas.xaml.cs">
+      <DependentUpon>Entradas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\FacturaViewModel.cs" />
+    <Compile Include="Content\ListArticulo.xaml.cs">
+      <DependentUpon>ListArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListDevolucion.xaml.cs">
+      <DependentUpon>ListDevolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListEmpleado.xaml.cs">
+      <DependentUpon>ListEmpleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListEntrada.xaml.cs">
+      <DependentUpon>ListEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListFactura.cs" />
+    <Compile Include="Content\ListFactura.xaml.cs">
+      <DependentUpon>ListFactura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListFacturaArticulo.xaml.cs">
+      <DependentUpon>ListFacturaArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListPendiente.xaml.cs">
+      <DependentUpon>ListPendiente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListProvedor.xaml.cs">
+      <DependentUpon>ListProvedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListRectificacion.xaml.cs">
+      <DependentUpon>ListRectificacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListSalida.xaml.cs">
+      <DependentUpon>ListSalida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListSalidaArticulo.xaml.cs">
+      <DependentUpon>ListSalidaArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\ListUsuario.xaml.cs">
+      <DependentUpon>ListUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\MainFactura.xaml.cs">
+      <DependentUpon>MainFactura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleArticulo.xaml.cs">
+      <DependentUpon>SingleArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleDevolucion.xaml.cs">
+      <DependentUpon>SingleDevolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleEmpleado.xaml.cs">
+      <DependentUpon>SingleEmpleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleEntrada.xaml.cs">
+      <DependentUpon>SingleEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleFactura.xaml.cs">
+      <DependentUpon>SingleFactura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleFacturaArticulo.xaml.cs">
+      <DependentUpon>SingleFacturaArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SinglePendiente.xaml.cs">
+      <DependentUpon>SinglePendiente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleProvedor.xaml.cs">
+      <DependentUpon>SingleProvedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleRectificacion.xaml.cs">
+      <DependentUpon>SingleRectificacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleSalida.xaml.cs">
+      <DependentUpon>SingleSalida.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleSalidaArticulo.xaml.cs">
+      <DependentUpon>SingleSalidaArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SingleUsuario.xaml.cs">
+      <DependentUpon>SingleUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Content\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Content\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Content\SettingsAppearance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Content\SettingsAppearance.xaml.cs">
+      <DependentUpon>SettingsAppearance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Content\SettingsAppearanceViewModel.cs" />
+    <Page Include="Pages\AgregarArticulo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Empleados.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Entradas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AgregarEntrada.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Proveedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Salidas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Pages\AgregarArticulo.xaml.cs">
+      <DependentUpon>AgregarArticulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Entradas.xaml.cs">
+      <DependentUpon>Entradas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AgregarEntrada.xaml.cs">
+      <DependentUpon>AgregarEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Proveedor.xaml.cs">
+      <DependentUpon>Proveedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="Reports\Inventario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="WarehouseManager_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Properties\Properties.csproj">
+      <Project>{58fbfa38-ee6e-4b91-ba5c-1fee76c882eb}</Project>
+      <Name>Properties</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WarehouseManager.BC\WarehouseManager.BC.csproj">
+      <Project>{d5a8168a-6e79-4e3e-b69a-7eeaa491049c}</Project>
+      <Name>WarehouseManager.BC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spreadsheet.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ware.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

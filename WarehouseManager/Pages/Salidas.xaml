@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WarehouseManager.Pages.Salidas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <!-- TODO: set @SelectedSource -->
+        <mui:ModernTab  SelectedSource="/Content/ListSalida.xaml" Layout="Tab">
+            <mui:ModernTab.Links>
+                <!-- TODO: set @Source -->
+                <mui:Link DisplayName="Listado" Source="/Content/ListSalida.xaml"  />
+                <mui:Link DisplayName="Nuevo" Source="/Content/SingleSalida.xaml" />
+            </mui:ModernTab.Links>
+        </mui:ModernTab>
+    </Grid>
+</UserControl>

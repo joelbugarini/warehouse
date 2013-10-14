@@ -3,27 +3,35 @@ using System;
 namespace Properties
 {
     public class SalidaArticulo
-    {private int idSalidaArticulo;
+    {
+        private int idSalidaArticulo;
 
         public int IdSalidaArticulo
         {
             get { return idSalidaArticulo; }
             set { idSalidaArticulo = value; }
         }
-private int idSalida;
+        private int idSalida;
 
         public int IdSalida
         {
             get { return idSalida; }
             set { idSalida = value; }
         }
-private int idArticulo;
+        private int idArticulo;
 
         public int IdArticulo
         {
             get { return idArticulo; }
             set { idArticulo = value; }
         }
+        private int cantidad;
 
+
+        public int Cantidad
+        {
+            get { return cantidad; }
+            set { cantidad = value; }
+        }
     }
 }

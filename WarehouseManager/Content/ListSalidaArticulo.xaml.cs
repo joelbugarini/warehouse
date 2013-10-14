@@ -6,6 +6,7 @@ using System.Windows.Input;
 using FirstFloor.ModernUI.Windows.Controls;
 using WarehouseManager.BC;
 using Properties;
+using System;
 
 namespace WarehouseManager.Content
 {
@@ -23,91 +24,22 @@ namespace WarehouseManager.Content
             Articulos = obj.ReadArticulo();
             SalidaArticulos = obj.ReadSalidaArticulos(salida.IdSalida);
 
-            DataContext = Articulos;
+            listArticulo.DataContext = Articulos;
+            listSalidaArticulos.DataContext = SalidaArticulos;
+
 
         }
 
-        private void listSalidaArticulos_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-           
-        }
+       
 
         public void Update() 
         {
             ReadBC obj = new ReadBC();
-            this.DataContext = obj.ReadSalidaArticulos(salida.IdSalida);
+            listSalidaArticulos.DataContext = obj.ReadSalidaArticulos(salida.IdSalida);
+            listArticulo.DataContext = obj.ReadArticulo();
         }
 
-        private void txtBusqueda_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.IdSalidaArticulo
-                        where (element.Nombre.ToString().Trim().ToLower().Contains(txtNombreBusqueda.Text.Trim().ToLower()) &&
-                        element.Descripcion.ToString().Trim().ToLower().Contains(txtDescripcionBusqueda.Text.Trim().ToLower()) &&
-                        element.Precio.ToString().Trim().ToLower().Contains(txtPrecioBusqueda.Text.Trim().ToLower()) &&
-                        element.Unidad.ToString().Trim().ToLower().Contains(txtUnidadBusqueda.Text.Trim().ToLower()) &&
-                        element.Cantidad.ToString().Trim().ToLower().Contains(txtCantidadBusqueda.Text.Trim().ToLower())
-                         )
-                        select element;
 
-            this.DataContext = query;
-        }
-        private void headIdSalida(object sender, MouseButtonEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.IdSalida
-                        select element;
-
-            this.DataContext = query;
-        }
-        private void headIdArticulo(object sender, MouseButtonEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.IdArticulo
-                        select element;
-
-            this.DataContext = query;
-        }
-        private void headNombre(object sender, MouseButtonEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.Nombre
-                        select element;
-
-            this.DataContext = query;
-        }
-        private void headDescripcion(object sender, MouseButtonEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.Descripcion
-                        select element;
-
-            this.DataContext = query;
-        }
-        private void headPrecio(object sender, MouseButtonEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.Precio
-                        select element;
-
-            this.DataContext = query;
-        }
-        private void headUnidad(object sender, MouseButtonEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.Unidad
-                        select element;
-
-            this.DataContext = query;
-        }
-        private void headCantidad(object sender, MouseButtonEventArgs e)
-        {
-            var query = from element in SalidaArticulos
-                        orderby element.Cantidad
-                        select element;
-
-            this.DataContext = query;
-        }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             Update();
@@ -130,7 +62,7 @@ namespace WarehouseManager.Content
                          )
                         select element;
 
-            this.DataContext = query;
+            listArticulo.DataContext = query;
         }
         private void headNombre2(object sender, MouseButtonEventArgs e)
         {
@@ -175,7 +107,85 @@ namespace WarehouseManager.Content
 
         private void listArticulo_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Aqui van los cambios");
+            Articulo art = listArticulo.SelectedValue as Articulo;
+            art.Cantidad = art.Cantidad - Convert.ToInt32(btnCantidad.Text);
+            UpdateBC objUpdate = new UpdateBC();
+
+            objUpdate.Update(art, art.IdArticulo);
+
+            CreateBC objCreate = new CreateBC();
+            SalidaArticulo salida2 = new SalidaArticulo();
+            salida2.IdSalida = salida.IdSalida;
+            salida2.IdArticulo = art.IdArticulo;
+            salida2.Cantidad = Convert.ToInt32(btnCantidad.Text);
+
+            objCreate.Create(salida2);
+            Update();
+        }
+
+        private void listSalidaArticulos_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            SalidaArticulos art = listSalidaArticulos.SelectedValue as SalidaArticulos;
+            SalidaArticulo salidaArt = new SalidaArticulo();
+
+            salidaArt.IdArticulo = art.IdArticulo;
+            salidaArt.IdSalida = art.IdSalida;
+            salidaArt.IdSalidaArticulo = art.IdSalidaArticulo;
+            salidaArt.Cantidad = art.Cantidad;
+
+
+            UpdateBC objUpdate = new UpdateBC();
+            
+            ReadOneBC objRead = new ReadOneBC();
+            Articulo artUpdate = objRead.ReadOneArticulo(salidaArt.IdArticulo);
+            artUpdate.Cantidad += Convert.ToInt16(btnCantidad2.Text);
+            salidaArt.Cantidad -= Convert.ToInt16(btnCantidad2.Text);
+
+           
+
+            objUpdate.Update(artUpdate, salidaArt.IdArticulo);
+            if (salidaArt.Cantidad == 0)
+            {
+                DeleteBC objDel = new DeleteBC();
+                objDel.DeleteSalidaArticulo(salidaArt.IdSalidaArticulo);
+            }
+            else
+            {
+                objUpdate.Update(salidaArt, salidaArt.IdSalidaArticulo);
+            }
+
+            Update();
+
+        }
+
+        private void btnReport_Click(object sender, RoutedEventArgs e)
+        {
+            ReadOneBC objRead = new ReadOneBC();
+            ReadBC obj = new ReadBC();
+            Empleado emp = objRead.ReadOneEmpleado(salida.IdEmpleado);
+
+            List<List<SalidaArticulos>> splitArticulos = new List<List<SalidaArticulos>>();
+            List<UserControl> reportes = new List<UserControl>();
+
+            splitArticulos = Split( obj.ReadSalidaArticulos(salida.IdSalida), 45);
+
+            foreach (List<SalidaArticulos> articulos in splitArticulos)
+            {
+                reportes.Add(new Reports.Salida(articulos, emp.Nombre +" "+ emp.ApellidoPaterno));
+            }
+
+            Report objRep = new Report();
+            objRep.Generar("", reportes);
+        }
+
+
+        public static List<List<SalidaArticulos>> Split(List<SalidaArticulos> source, int size)
+        {
+            return source
+                .Select((x, i) => new { Index = i, Value = x })
+                .GroupBy(x => x.Index / size)
+                .Select(x => x.Select(v => v.Value).ToList())
+                .ToList();
         }
 
     }

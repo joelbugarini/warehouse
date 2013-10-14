@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reports/congreso.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("spreadsheet.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ware.ico")]
 

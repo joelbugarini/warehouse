@@ -218,3 +218,5 @@ C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseMa
 C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager\obj\Debug\WarehouseManager.g.resources
 C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager\obj\Debug\WarehouseManager.exe.manifest
 C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager\obj\Debug\WarehouseManager.application
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager\obj\Debug\Reports\Salida.baml
+C:\Users\Joel\Documents\Visual Studio 2010\Projects\WarehouseManager\WarehouseManager\obj\Debug\Reports\Salida.g.cs

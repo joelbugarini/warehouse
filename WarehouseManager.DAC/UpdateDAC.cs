@@ -19,9 +19,11 @@ namespace WarehouseManager.DAC
             cmd.Parameters.AddWithValue("@IdSalidaArticulo", idSalidaArticulo);
             cmd.Parameters.AddWithValue("@IdSalida", obj.IdSalida);
             cmd.Parameters.AddWithValue("@IdArticulo", obj.IdArticulo);
+            cmd.Parameters.AddWithValue("@Cantidad", obj.Cantidad);
             con.Open();
 
-            if (cmd.ExecuteNonQuery() > 0)
+            int n = cmd.ExecuteNonQuery();
+            if (n > 0)
             {
                 con.Close();
                 return true;

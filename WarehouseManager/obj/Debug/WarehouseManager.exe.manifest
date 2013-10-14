@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="WarehouseManager.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="WarehouseManager.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="ware.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2t/CzwCfvbw85WHPI+zTBcOGmkk=</dsig:DigestValue>
+        <dsig:DigestValue>Vppfma84gU3uAGfH2G4AagZJXHI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WarehouseManager.exe" size="346112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WarehouseManager.exe" size="348160">
       <assemblyIdentity name="WarehouseManager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RTnjY5nqwqNIqzdSJLPnpUKFBwc=</dsig:DigestValue>
+        <dsig:DigestValue>+SZbNDaj6+cMcHI8rcmeWaGY5yA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>L3FHFCnRTFAw4dkUxbsdfg/nV3Y=</dsig:DigestValue>
+        <dsig:DigestValue>ko2dpr5bIq4x1jkCbS5lzHdS0g4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,10 +110,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>UOEZ5TAnEDJQyg/61eEuS5YEdvQ=</dsig:DigestValue>
+        <dsig:DigestValue>/vpYARIk7t2Hvo9+8YaTSqyD9rY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Reports\Congreso.png" size="59615">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XrNxFgBcjSUZN28Ot5eESp0J+rA=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="spreadsheet.ico" size="108798">
     <hash>
       <dsig:Transforms>

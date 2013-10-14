@@ -18,6 +18,7 @@ namespace WarehouseManager.DAC
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@IdSalida", obj.IdSalida);
             cmd.Parameters.AddWithValue("@IdArticulo", obj.IdArticulo);
+            cmd.Parameters.AddWithValue("@Cantidad", obj.Cantidad);
             con.Open();
 
             if (cmd.ExecuteNonQuery() > 0)

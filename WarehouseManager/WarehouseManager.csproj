@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>http://localhost/publish/</PublishUrl>
+    <PublishUrl>http://localhost/almacen/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -27,7 +27,7 @@
     <MinimumRequiredVersion>1.0.0.5</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,6 +115,9 @@
     <Compile Include="Report.cs" />
     <Compile Include="Reports\Inventario.xaml.cs">
       <DependentUpon>Inventario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Salida.xaml.cs">
+      <DependentUpon>Salida.xaml</DependentUpon>
     </Compile>
     <Page Include="Assets\Warehouse.Theme.xaml">
       <SubType>Designer</SubType>
@@ -397,6 +400,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Reports\Salida.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -435,6 +442,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Reports\Congreso.png" />
     <Content Include="spreadsheet.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

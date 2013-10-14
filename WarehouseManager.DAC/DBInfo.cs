@@ -9,15 +9,15 @@ namespace WarehouseManager.DAC
     {       
         public DBInfo()
         {
-            Server = "195.0.100.15";
+           /* Server = "195.0.100.15";
             DataBase = "InventoryMan";
             User = "prowler";
-            Password = "recon";
+            Password = "recon";*/
 
-          /*  Server = "195.0.100.4";
+            Server = "195.0.100.4";
             DataBase = "InventoryMan";
             User = "IngUser";
-            Password = "#recon1205#";*/
+            Password = "#recon1205#";
         }
         private string server;
 
